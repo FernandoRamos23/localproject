@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('user.static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('user.static', filename='css/components/aside.css') }}">
+    <link rel="stylesheet" href="{{ url_for('user.static', filename='css/components/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('user.static', filename='css/components/quickAccess.css') }}">
+    <title>Document</title>
+    <!-- Fuente: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Layout */
+        .layout{display:grid;grid-template-columns:260px 1fr;min-height:100dvh}
+
+        .main{padding:24px;}
+        /* Grid */
+        .grid{display:grid;gap:var(--grid-gap)}
+        .grid.cards{grid-template-columns:repeat(4, minmax(0,1fr))}
+        @media (max-width:1200px){
+        .grid.cards{grid-template-columns:repeat(2, minmax(0,1fr))}
+        .layout{grid-template-columns:220px 1fr}
+        }
+        @media (max-width:700px){
+        .layout{grid-template-columns:1fr}
+        .header{grid-template-columns:1fr}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="layout">
+        {% include 'components/aside.html' %}
+        <main class="main">
+            {% include 'components/header.html' %}
+            <h2>Caja</h2>
+            <p>Aquí va el contenido de la página de Caja.</p>
+        </main>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* Accesos rápidos */
+.accesos-rapidos {
+  margin-top: var(--grid-gap);
+  margin: 15px 0;
+}
+
+.accesos-rapidos .grid.quick {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--grid-gap);
+}
+
+.accesos-rapidos .quicklink{
+display:flex;gap:12px;align-items:center;padding:16px;border-radius:16px;
+background:linear-gradient(135deg, rgba(106,166,255,.12), rgba(139,225,255,.10) 60%, rgba(255,255,255,.02));
+border:1px solid rgba(106,166,255,.30);
+text-decoration:none;color:var(--text);transition:transform .08s ease, box-shadow .2s ease
+}
+
+.quicklink:hover{transform:translateY(-2px);box-shadow:var(--shadow-2)}
+.icon{
+width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
+background:linear-gradient(180deg, var(--brand), var(--brand-2));
+color:#0b1020;border:1px solid rgba(255,255,255,.15)
+}
+.quicklink strong{font-size:14px}
+.quicklink span{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+
+
+.accesos-rapidos .tip {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  align-items: flex-start;
+}
+
+.accesos-rapidos .tip .icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--success-bg, #2ecc71);
+}
